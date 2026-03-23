@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../../widgets/uihelper.dart';
 
 class LoginScreen extends StatelessWidget {
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,15 +48,25 @@ class LoginScreen extends StatelessWidget {
                  shape: RoundedRectangleBorder(
                    borderRadius: BorderRadius.circular(10)
                  )
-                 ),child: Row(children: [
+                 ),child: Row(
+                 mainAxisAlignment: MainAxisAlignment.center,
+                 children: [
+                   UiHelper.CustomText( text: "Login with", color: Colors.white, fontweight: FontWeight.bold, fontsize: 14, fontfamily: "bold"),
+                   SizedBox(width: 5),
+                   UiHelper.CustomImage(img: "zomato.png"),
 
-                   UiHelper.CustomText( text: "Login with", color: Colors.white, fontweight: FontWeight.w700, fontsize: 14)
-               ],))
+               ],)
                )
+               ),
+               SizedBox(height: 8,),
+               UiHelper.CustomText(text: "Access your saved addresses from Zomato automatically!", color: Colors.grey, fontweight: FontWeight.normal, fontsize: 10),
+               SizedBox(height: 20),
+               UiHelper.CustomText(text: "or login with phone number", color: Colors.green, fontweight: FontWeight.bold, fontsize: 13),
+
               ],
 
            ),
-         )
+         ),
          )
        ],),
      )
