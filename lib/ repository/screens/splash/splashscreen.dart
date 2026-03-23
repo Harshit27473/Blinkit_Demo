@@ -1,6 +1,8 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import '../../../ repository/widgets/uihelper.dart';
 import '../../../domain/constants/appcolors.dart';
+import '../login/loginscreen.dart';
 
 
 class SplashScreen extends StatefulWidget{
@@ -9,7 +11,13 @@ class SplashScreen extends StatefulWidget{
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
+  @override
+  void initState(){
+     super.initState();
+     Timer(Duration(seconds: 3),(){
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
+      });
+  }
   @override
   Widget build(BuildContext context) {
    return Scaffold(
