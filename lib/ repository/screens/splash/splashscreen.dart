@@ -1,0 +1,26 @@
+import 'package:flutter/material.dart';
+import '../../../ repository/widgets/uihelper.dart';
+import '../../../domain/constants/appcolors.dart';
+
+
+class SplashScreen extends StatefulWidget{
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+
+  @override
+  Widget build(BuildContext context) {
+   return Scaffold(
+     backgroundColor: AppColors.scaffoldbackground,
+     body: Center(
+       child: Column(
+         mainAxisAlignment: MainAxisAlignment.center,
+         children: [
+         UiHelper.CustomImage(img: "img.png")
+       ],),
+     ),
+   );
+  }
+}
