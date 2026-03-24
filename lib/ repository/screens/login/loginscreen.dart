@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
-
+import 'package:flutter/material.dart'; 
 import '../../widgets/uihelper.dart';
+import '../bottomnav/bottomnavscreen.dart';
 
 class LoginScreen extends StatelessWidget {
 
@@ -43,7 +43,9 @@ class LoginScreen extends StatelessWidget {
                UiHelper.CustomText(text: "7719xxxxxx", color: Colors.grey, fontweight: FontWeight.bold, fontsize: 14,fontfamily: "bold"),
                SizedBox(height: 20),
                SizedBox(height: 48, width: 295,
-               child: ElevatedButton(onPressed: (){}, style: ElevatedButton.styleFrom(
+               child: ElevatedButton(onPressed: (){
+                 Navigator.push(context, MaterialPageRoute(builder: (context)=>BottomNavScreen()));
+               }, style: ElevatedButton.styleFrom(
                  backgroundColor: Colors.red,
                  shape: RoundedRectangleBorder(
                    borderRadius: BorderRadius.circular(10)

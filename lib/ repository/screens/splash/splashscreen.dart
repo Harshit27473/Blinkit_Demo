@@ -4,7 +4,6 @@ import '../../../ repository/widgets/uihelper.dart';
 import '../../../domain/constants/appcolors.dart';
 import '../login/loginscreen.dart';
 
-
 class SplashScreen extends StatefulWidget{
   @override
   State<SplashScreen> createState() => _SplashScreenState();
